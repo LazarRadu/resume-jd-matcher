@@ -4,9 +4,15 @@ An AI-powered tool that compares a resume against a job description and returns 
 match score, a gap analysis, and actionable suggestions. Built with Next.js and
 the Groq API (free, fast LLM inference).
 
-**Live demo:** _add your Vercel URL here after deploying_
+**🔗 Live demo:** [resume-jd-matcher-gamma.vercel.app](https://resume-jd-matcher-gamma.vercel.app/)
 
-<!-- Add a screenshot of the app here -->
+![Resume / JD Matcher demo](public/screenshots/demo.gif)
+
+## Screenshots
+
+| Paste resume + job description | AI match score, gaps & suggestions |
+| :---: | :---: |
+| ![Home screen](public/screenshots/01-home.png) | ![Analysis results](public/screenshots/03-results.png) |
 
 ## What problem it solves
 
