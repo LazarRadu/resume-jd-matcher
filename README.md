@@ -90,4 +90,4 @@ MIT
 
 ## Author
 
-Radu Voda — built as a portfolio project.
+radu lazar — built as a portfolio project.
