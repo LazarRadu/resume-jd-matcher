@@ -67,7 +67,7 @@ src/
   app/
     page.tsx              # client component: form + results
     layout.tsx
-    api/match/route.ts    # POST handler — validates input, calls Claude
+    api/match/route.ts    # POST handler — validates input, calls Groq
   components/
     MatchForm.tsx         # resume + job-description inputs
     ResultsPanel.tsx      # score + gaps + suggestions
@@ -78,6 +78,34 @@ src/
     prompt.ts             # system prompt + JSON format instructions
     schema.ts             # Zod schema + MatchResult type
 ```
+
+## How this was built
+
+This project was built collaboratively with **[Claude Code](https://claude.com/claude-code)**,
+Anthropic's agentic coding tool, as a hands-on exercise in AI-assisted
+development — going from an empty folder to a deployed, working app while
+directing the AI at each step. The rough process:
+
+1. **Scaffolding** — Generated the Next.js + TypeScript + Tailwind project and
+   wired up the App Router.
+2. **Core feature** — Designed the `/api/match` route, the LLM prompt, and a Zod
+   schema so the model always returns validated, typed JSON. Started against the
+   Anthropic API, then switched to Groq's free tier
+   (`llama-3.3-70b-versatile`) to keep the app free to run.
+3. **UI** — Built the form and results components (score badge, gap list,
+   suggestions) with Tailwind.
+4. **Tooling & environment** — Installed Node.js, Git, and the GitHub CLI;
+   initialized the repo and pushed to GitHub.
+5. **Deployment** — Deployed to Vercel, set the `GROQ_API_KEY` environment
+   variable, and verified the live API end-to-end.
+6. **Documentation** — Captured the demo GIF and screenshots by driving the
+   running app with a headless browser ([Playwright](https://playwright.dev))
+   and encoding the recording with ffmpeg, then wrote this README.
+
+I made the product decisions (a free LLM over a paid one, structured JSON
+output, scope) and reviewed each change; Claude Code handled the
+implementation, terminal work, and deployment steps. The capture scripts used
+for the GIF and screenshots live in [`scripts/`](scripts).
 
 ## Limitations
 
